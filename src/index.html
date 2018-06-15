@@ -3,9 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="style.css" />-->
   </head>
   <body>
+    <span>Ingresa el mensaje a cifrar</span><br>
+      <input type="text" id="mensajito"><br>
+      <span>Ingresa la llave</span><br>
+      <input type="number" id="offset"><br>
+      <input type="button" onclick="buttonCode()" value="Codifica!"></input><br>
+    <div id="cajitaCifrado">""</div>
+    <span>Descifra tu mensaje</span><br>
+    <span>Ingresa el mensaje a descifrar</span><br>
+      <input type="text" id="mensajito2"><br>
+      <input type="button" onclick="buttonDecode()" value ="Decodifica!"></input><br>
+    <div id="cajitaDescrifado">""</div>
     <div id="root"></div>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
