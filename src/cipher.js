@@ -19,7 +19,7 @@ window.cipher = {
         } else if (codeNumber === 32) {
           cifradoJs+= String.fromCharCode(codeNumber);
         }
-        console.log(cifradoJs);
+        //console.log(cifradoJs);
       }
       return cifradoJs;
   },
