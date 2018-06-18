@@ -3,22 +3,46 @@
   <head>
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
-    <!-- <link rel="stylesheet" href="style.css" />-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
   </head>
   <body>
-    <span>Ingresa el mensaje a cifrar</span><br>
-      <input type="text" id="mensajito"><br>
-      <span>Ingresa la llave</span><br>
-      <input type="number" id="offset"><br>
-      <input type="button" onclick="buttonCode()" value="Codifica!"></input><br>
-    <div id="cajitaCifrado">""</div>
-    <span>Descifra tu mensaje</span><br>
-    <span>Ingresa el mensaje a descifrar</span><br>
-      <input type="text" id="mensajito2"><br>
-      <input type="button" onclick="buttonDecode()" value ="Decodifica!"></input><br>
-    <div id="cajitaDescrifado">""</div>
-    <div id="root"></div>
-    <script src="cipher.js"></script>
-    <script src="index.js"></script>
-  </body>
+    <div class="container">
+      <div class="page-header">
+        <h1>Cifrado César</h1>
+      </div>
+      <div class="jumbotron">
+        <p>Este programa te permitirá obtener un mensaje cifrado que podrás usar con algún amigo
+           o amiga para compartir información, así mismo, podrán descifrar el mensaje</p>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <span class="block">Ingresa el mensaje a cifrar</span><br>
+          <input type="text" id="mensajito"><br>
+        </div>
+        <div class="col-sm">
+          <span class="block">Ingresa la llave</span><br>
+          <input type="number" id="offset"><br>
+        </div>
+        <div class="col-sm">
+          <input type="button" class="btn btn-success" onclick="buttonCode()" value="Codifica!"></input><br>
+        </div>
+      </div>
+      <div id="cajitaCifrado">""</div>
+      <hr>
+      <div class="row">
+       <div class="col-sm">
+         <span class="block">Ingresa el mensaje a descifrar</span><br>
+         <input type="text" id="mensajito2"><br>
+       </div>
+       <div class="col-sm">
+         <input type="button" class="btn btn-success" onclick="buttonDecode()" value ="Decodifica!"></input><br>
+       </div>
+     </div>
+     <hr>
+     <div id="cajitaDescrifado">""</div>
+   </div>
+   <div id="root"></div>
+   <script src="cipher.js"></script>
+   <script src="index.js"></script>
+</body>
 </html>
