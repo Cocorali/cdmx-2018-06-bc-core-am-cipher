@@ -1,27 +1,27 @@
 window.cipher = {
 //Función para cifrar
     encode : (message, offset) => {
-      let cifradoJs = "";
+      let codedMessage = "";
       //Bucle para iterar letra regular y obtener posición ASCII
       for(let i= 0; i< message.length; i++) {
         //Creando variable para almacenar posición regular ASCII
-        let codeNumber = message.charCodeAt(i);
+        let keyNumber = message.charCodeAt(i);
         //Estableciendo rangos para mayúsculas
-        if (codeNumber >= 65 && codeNumber <=90) {
+        if (keyNumber >= 65 && keyNumber <=90) {
           //Aplicando fórmula para obtener posición cifrada ASCII y creando variable para almacenarla
-          let codeNew = (codeNumber - 65 + offset) % 26 + 65;
+          let codeNew = (keyNumber - 65 + offset) % 26 + 65;
           //Obteniendo letras cifradas a partir de let codeNew y concatenando con let cipher
-          cifradoJs+= String.fromCharCode(codeNew);
-        } else if (codeNumber >= 97 && codeNumber <=122) {
+          codedMessage+= String.fromCharCode(codeNew);
+        } else if (keyNumber >= 97 && keyNumber <=122) {
           //Estableciendo rangos para minúsculas
-          let codeNew = (codeNumber - 97 + offset) % 26 + 97;
-          cifradoJs+= String.fromCharCode(codeNew);
-        } else if (codeNumber === 32) {
-          cifradoJs+= String.fromCharCode(codeNumber);
+          let codeNew = (keyNumber - 97 + offset) % 26 + 97;
+          codedMessage+= String.fromCharCode(codeNew);
+        } else if (keyNumber === 32) {
+          codedMessage+= String.fromCharCode(keyNumber);
         }
         //console.log(cifradoJs);
       }
-      return cifradoJs;
+      return codedMessage;
   },
 
   decode : (message2, offset) => {
