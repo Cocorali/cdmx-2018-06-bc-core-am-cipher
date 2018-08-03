@@ -1,48 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
-  </head>
-  <body>
-    <div class="container">
-      <div class="page-header">
-        <h1>Cifrado César</h1>
-      </div>
-      <div class="jumbotron">
-        <p>Este programa te permitirá obtener un mensaje cifrado que podrás usar con algún amigo
-           o amiga para compartir información, así mismo, podrán descifrar el mensaje</p>
-      </div>
-      <div class="row">
-        <div class="col-sm">
-          <span class="block">Ingresa el mensaje a cifrar</span><br>
-          <input type="text" id="mensajito"><br>
-        </div>
-        <div class="col-sm">
-          <span class="block">Ingresa la llave</span><br>
-          <input type="number" id="offset"><br>
-        </div>
-        <div class="col-sm">
-          <input type="button" class="btn btn-success" onclick="buttonCode()" value="Codifica!"></input><br>
-        </div>
-      </div>
-      <div id="cajitaCifrado">""</div>
+
+<head>
+  <meta charset="utf-8">
+  <title>Caesar Cipher</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+</head>
+
+<body>
+  <header>
+    <h1>The Lock</h1>
+  </header>
+  <section class="jumbotron">
+    <p>Cifra información privada, comparte la clave con tu círculo de confianza para que puedan descifrar el mensaje. Construye redes más seguras con 'The Lock'</p>
       <hr>
-      <div class="row">
-       <div class="col-sm">
-         <span class="block">Ingresa el mensaje a descifrar</span><br>
-         <input type="text" id="mensajito2"><br>
-       </div>
-       <div class="col-sm">
-         <input type="button" class="btn btn-success" onclick="buttonDecode()" value ="Decodifica!"></input><br>
-       </div>
-     </div>
-     <hr>
-     <div id="cajitaDescrifado">""</div>
-   </div>
-   <div id="root"></div>
-   <script src="cipher.js"></script>
-   <script src="index.js"></script>
+      <p>“The best way of keeping a secret is to pretend there isn't one.”
+          ― Margaret Atwood, The Blind Assassin</p>
+  </section>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12">
+        <textarea id="message-to-code" placeholder="Mensaje a cifrar"></textarea>
+        <input type="number" id="offset" placeholder="Clave secreta">
+        <input type="button" class="btn btn-warning" onclick="buttonCode()" value="Cifrar">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-lg-12">
+        <textarea id="message-to-decode" placeholder="Mensaje cifrado"></textarea>
+        <input type="button" class="btn btn-success" onclick="buttonDecode()" value="Descifrar">
+      </div>
+    </div>
+  </div>  
+  <footer>Desarrollado por Copelia Altamirano. Laboratoria CDMX 2018</footer>
+  <script src="cipher.js"></script>
+  <script src="index.js"></script>
 </body>
+
 </html>
